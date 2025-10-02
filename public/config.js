@@ -18,8 +18,8 @@ window.Config = {
   // 导航栏菜单
   Navi: [
     {
-      text: '刷新',
-      url: 'https://status.cy00.top'
+      text: 'Bilibili',
+      url: 'https://space.bilibili.com/1492952647'
     },
     {
       text: 'GitHub',
@@ -27,7 +27,7 @@ window.Config = {
     },
     {
       text: '博客',
-      url: 'https://status.cy00.top'
+      url: 'https://blog.cy00.top'
     },
   ],
 };
