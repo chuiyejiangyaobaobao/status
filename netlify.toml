@@ -2,21 +2,6 @@
   publish = "build"
   command = "npm run build"
   
-# 尝试取消netlify重定向
-[[redirects]]
-  from = "http://status.cy00.top/*"
-  to = "/:splat"
-  status = 200
-  force = false
-  conditions = {Host = "status.cy00.top"}
-
-[[redirects]]
-  from = "https://status.cy00.top/*"
-  to = "/:splat" 
-  status = 200
-  force = false
-  conditions = {Host = "status.cy00.top"}
-
 # HTML 文件 - 长期缓存（项目不再修改）
 [[headers]]
   for = "/*.html"
