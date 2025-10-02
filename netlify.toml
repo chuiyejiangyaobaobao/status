@@ -1,0 +1,45 @@
+[build]
+  publish = "build"
+  command = "npm run build"
+
+# HTML 文件 - 长期缓存（项目不再修改）
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"  # 1年永久缓存
+    Timing-Allow-Origin = "*"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+
+# 配置文件 - 长期缓存
+[[headers]]
+  for = "/config.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"  # 1年永久缓存
+
+# 静态 JS 文件 - 永久缓存
+[[headers]]
+  for = "/static/js/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 静态 CSS 文件 - 永久缓存
+[[headers]]
+  for = "/static/css/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 图标文件 - 永久缓存
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 默认配置 - 所有文件长期缓存
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Timing-Allow-Origin = "*"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
