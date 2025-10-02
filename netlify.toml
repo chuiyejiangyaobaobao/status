@@ -2,6 +2,12 @@
   publish = "build"
   command = "npm run build"
   
+# 增强HSTS
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload
+
 # HTML 文件 - 长期缓存（项目不再修改）
 [[headers]]
   for = "/*.html"
