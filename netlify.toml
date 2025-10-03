@@ -1,14 +1,7 @@
 [build]
   publish = "build"
   command = "npm run build"
-  
-# 强制https
-[[redirects]]
-  from = "http://status.cy00.top/*"
-  to = "https://status.cy00.top/:splat"
-  status = 301
-  force = true
-
+ 
 # 增强HSTS
 [[headers]]
   for = "/*"
