@@ -6,7 +6,7 @@
 [[redirects]]
   from = "http://status.cy00.top/*"
   to = "https://status.cy00.top/:splat"
-  status = 200
+  status = 301
   force = true
 
 # 增强HSTS
